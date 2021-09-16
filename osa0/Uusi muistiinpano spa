@@ -1,0 +1,8 @@
+note over selain:
+selain alkaa suorittaa js-koodia
+joka estää sivun uudelleenlataamisen, 
+tekee uuden muistiinpanon ja lisää sen listalle,
+piirtää listan, ja lähettää muistiinpanon palvelimelle
+end note
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+palvelin-->selain: {"message":"note created"}
