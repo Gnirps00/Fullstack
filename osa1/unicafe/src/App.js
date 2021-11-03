@@ -4,9 +4,17 @@ const Button = ({ handleClick, text }) => <button onClick={handleClick}> {text} 
 
 const Statistics = ({ good, neutral, bad }) => {
   const all = () => good + neutral + bad
+  if(all() === 0){
+    return (
+      <div>
+        <h1>statistics</h1>
+        <div>No feedback given</div>
+      </div>
+    )
+  }
+
   const average = () => (good - bad) / all()
   const positive = () => good * 100 / all()
-
   return (
     <div>
       <h1>statistics</h1>
